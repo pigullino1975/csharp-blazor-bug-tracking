@@ -10,6 +10,6 @@
     {
         base.OnInitialized();
 
-        Bugs = BugService.GetBugs();
+        Bugs = BugService.GetBugs().OrderBy(p => p.Priority).ToList();
     }
 }
